@@ -1,0 +1,67 @@
+pipeline {
+    agent any
+
+    environment {
+        // Variables d'environnement
+        NODE_VERSION = '14' // Ou une autre version compatible
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clone le code depuis GitHub
+                git branch: 'main', url: 'https://github.com/username/repository.git'
+            }
+        }
+
+        stage('Setup Node.js') {
+            steps {
+                // Installe Node.js
+                nodejs(NODE_VERSION) {
+                    sh 'node --version'
+                    sh 'npm --version'
+                }
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                // Installe les dépendances
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Cypress Tests') {
+            steps {
+                // Lance Cypress en mode headless
+                sh 'npx cypress run'
+            }
+        }
+
+        stage('Publish Report') {
+            steps {
+                // Publie les rapports Mochawesome
+                publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'cypress/reports',
+                    reportFiles: 'mochawesome.html',
+                    reportName: 'Cypress Test Report'
+                ])
+            }
+        }
+    }
+
+    post {
+        always {
+            // Archive les rapports, logs, etc.
+            archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
+        }
+
+        failure {
+            // Notifie en cas d'échec
+            echo 'Tests échoués !'
+        }
+    }
+}
