@@ -1,0 +1,13 @@
+# Ignorer les dossiers générés par Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Ignorer les fichiers de configuration locaux
+.env
+node_modules/
+package-lock.json
+
+# Ignorer les logs et artefacts système
+*.log
+.DS_Store
+Thumbs.db

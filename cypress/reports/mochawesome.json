@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-17T11:35:22.709Z",
+    "end": "2025-01-17T11:35:52.791Z",
+    "duration": 30082,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ba537c15-43ce-4aa2-b2d8-617b1426b55e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\campus-form.cy.js",
+      "file": "cypress\\e2e\\campus-form.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "90f65d68-441c-4aa6-a127-29b410d3d073",
+          "title": "Campus France Form - Student",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit form for Student",
+              "fullTitle": "Campus France Form - Student Submit form for Student",
+              "timedOut": null,
+              "duration": 11251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(entry.Url);\ncy.viewport(1900, 1080);\ncy.get('#tarteaucitronPersonalize2').click();\ncy.get('input.username').type(entry.Email);\ncy.get('#edit-pass-pass1').type(entry.Password);\ncy.get('#edit-pass-pass2').type(entry.Confirm_password);\ncy.get(`label[for='edit-field-civilite-${entry.Gender}']`).click();\ncy.get('#edit-field-prenom-0-value').type(entry.Firstname);\ncy.get('#edit-field-nom-0-value').type(entry.Lastname);\ncy.get('#edit-field-pays-concernes-selectized').click().clear().type(entry.Country);\ncy.get('.selectize-dropdown-content div').contains(entry.Country).click();\ncy.get('#edit-field-code-postal-0-value').type(entry.Postal_code);\ncy.get('#edit-field-ville-0-value').type(entry.City);\ncy.get('#edit-field-telephone-0-value').type(entry.Phone);\ncy.get(`label[for=\"edit-field-publics-cibles-2\"]`).click();\ncy.get('#edit-field-domaine-etudes-selectized').click().clear().type(entry.Domain);\ncy.get('.selectize-dropdown-content div').contains(entry.Domain).click();\ncy.get('#edit-field-niveaux-etude-selectized').click().clear().type(entry.Level);\ncy.get('.selectize-dropdown-content div').contains(entry.Level).click();\nif (entry.Accept) {\n  cy.get(`label[for=\"edit-field-accepte-communications-value\"]`).click();\n}\ncy.log(`Formulaire soumis avec succès pour ${entry.Email}`);",
+              "err": {},
+              "uuid": "5e19fa8a-58a6-40d7-8dbd-57a982408ece",
+              "parentUUID": "90f65d68-441c-4aa6-a127-29b410d3d073",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5e19fa8a-58a6-40d7-8dbd-57a982408ece"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11251,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c93feaf0-a693-4897-8222-a1d0a3518043",
+          "title": "Campus France Form - PhD Student",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit form for PhD Student",
+              "fullTitle": "Campus France Form - PhD Student Submit form for PhD Student",
+              "timedOut": null,
+              "duration": 6720,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(entry.Url);\ncy.viewport(1900, 1080);\ncy.get('input.username').type(entry.Email);\ncy.get('#edit-pass-pass1').type(entry.Password);\ncy.get('#edit-pass-pass2').type(entry.Confirm_password);\ncy.get(`label[for='edit-field-civilite-${entry.Gender}']`).click();\ncy.get('#edit-field-prenom-0-value').type(entry.Firstname);\ncy.get('#edit-field-nom-0-value').type(entry.Lastname);\ncy.get('#edit-field-pays-concernes-selectized').click().clear().type(entry.Country);\ncy.get('.selectize-dropdown-content div').contains(entry.Country).click();\ncy.get('#edit-field-code-postal-0-value').type(entry.Postal_code);\ncy.get('#edit-field-ville-0-value').type(entry.City);\ncy.get('#edit-field-telephone-0-value').type(entry.Phone);\ncy.get(`label[for=\"edit-field-publics-cibles-3\"]`).click();\ncy.get('#edit-field-domaine-etudes-selectized').click().clear().type(entry.Domain);\ncy.get('.selectize-dropdown-content div').contains(entry.Domain).click();\ncy.get('#edit-field-niveaux-etude-selectized').click().clear().type(entry.Level);\ncy.get('.selectize-dropdown-content div').contains(entry.Level).click();\nif (entry.Accept) {\n  cy.get(`label[for=\"edit-field-accepte-communications-value\"]`).click();\n}\ncy.log(`Formulaire soumis avec succès pour ${entry.Email}`);",
+              "err": {},
+              "uuid": "95fc8784-c70c-4931-9668-2580c5f59e4a",
+              "parentUUID": "c93feaf0-a693-4897-8222-a1d0a3518043",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "95fc8784-c70c-4931-9668-2580c5f59e4a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6720,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "de205696-a820-48ad-9e0c-ca3a4b452cf9",
+          "title": "Campus France Form - Institutionnel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit form for Institutionnel",
+              "fullTitle": "Campus France Form - Institutionnel Submit form for Institutionnel",
+              "timedOut": null,
+              "duration": 8538,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(entry.Url);\ncy.viewport(1900, 1080);\ncy.get('input.username').type(entry.Email);\ncy.get('#edit-pass-pass1').type(entry.Password);\ncy.get('#edit-pass-pass2').type(entry.Confirm_password);\ncy.get(`label[for='edit-field-civilite-${entry.Gender}']`).click();\ncy.get('#edit-field-prenom-0-value').type(entry.Firstname);\ncy.get('#edit-field-nom-0-value').type(entry.Lastname);\ncy.get('#edit-field-pays-concernes-selectized').click().clear().type(entry.Country);\ncy.get('.selectize-dropdown-content div').contains(entry.Country).click();\ncy.get('#edit-field-code-postal-0-value').type(entry.Postal_code);\ncy.get('#edit-field-ville-0-value').type(entry.City);\ncy.get('#edit-field-telephone-0-value').type(entry.Phone);\ncy.get(`label[for=\"edit-field-publics-cibles-4\"]`).click();\ncy.get('#edit-field-fonction-0-value').type(entry.Fonction);\ncy.get('#edit-field-type-organisme-selectized').click().clear().type(entry.TypeOrganisme);\ncy.get('.selectize-dropdown-content div').contains(entry.TypeOrganisme).click();\ncy.get('#edit-field-nom-organisme-0-value').type(entry.OrganismeName);\nif (entry.Accept) {\n  cy.get(`label[for=\"edit-field-accepte-communications-value\"]`).click();\n}\ncy.log(`Formulaire soumis avec succès pour ${entry.Email}`);",
+              "err": {},
+              "uuid": "a4fd9049-c4ec-466f-a40d-f5a0e4cb33e7",
+              "parentUUID": "de205696-a820-48ad-9e0c-ca3a4b452cf9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a4fd9049-c4ec-466f-a40d-f5a0e4cb33e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8538,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

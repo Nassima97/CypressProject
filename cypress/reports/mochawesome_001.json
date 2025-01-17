@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-17T11:35:57.138Z",
+    "end": "2025-01-17T11:36:07.534Z",
+    "duration": 10396,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e959d07c-33ec-4a91-8431-292d60df3d7d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\form_submission.cy.js",
+      "file": "cypress\\e2e\\form_submission.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e2c0858-5cd8-4a51-9533-88c890eb7748",
+          "title": "Form Submission Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Send Form for man (Client 1)",
+              "fullTitle": "Form Submission Tests Send Form for man (Client 1)",
+              "timedOut": null,
+              "duration": 6126,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/?version=13efcba7-1a49-45a5-9967-c2da8ebdd189&uid=f7bd60f0-34c8-40e3-8e2c-06cc19fcb730');\n// Sélection bouton radio\ncy.get(`input[type='radio'][value='${client.genre}']`).check();\n// Sélection du pays\ncy.get('#select-9648').select(client.Pays_de_naissance);\n// Remplir les champs texte\ncy.get('#email-c6a3').type(client.Email);\ncy.get('#name-c6a3').type(client.Name);\ncy.get('#phone-84d9').type(client.Phone);\ncy.get('#address-be2d').type(client.Address);\ncy.get('#message-c6a3').type(client.Message);\n// Sélection du produit\ncy.get('#select-c283').select(client.Product);\n// Cocher les cases de loisirs\ncy.contains('label', client.loisir).invoke('attr', 'for').then(checkboxId => {\n  cy.get(`#${checkboxId}`).check();\n});\n// Soumettre le formulaire\ncy.xpath('//*[@id=\"carousel_1853\"]/div/div/div/div/form/div[12]/a').click();\n// Vérification du message de succès\ncy.xpath('//div[contains(@class, \"u-form-send-message\") and contains(@class, \"u-form-send-success\")]').should('contain.text', 'Thank you! Your message has been sent.');",
+              "err": {},
+              "uuid": "54efd1cf-0674-44b3-9cd2-a424f5785275",
+              "parentUUID": "3e2c0858-5cd8-4a51-9533-88c890eb7748",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Send Form for women (Client 2)",
+              "fullTitle": "Form Submission Tests Send Form for women (Client 2)",
+              "timedOut": null,
+              "duration": 4064,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/?version=13efcba7-1a49-45a5-9967-c2da8ebdd189&uid=f7bd60f0-34c8-40e3-8e2c-06cc19fcb730');\n// Sélection bouton radio\ncy.get(`input[type='radio'][value='${client.genre}']`).check();\n// Sélection du pays\ncy.get('#select-9648').select(client.Pays_de_naissance);\n// Remplir les champs texte\ncy.get('#email-c6a3').type(client.Email);\ncy.get('#name-c6a3').type(client.Name);\ncy.get('#phone-84d9').type(client.Phone);\ncy.get('#address-be2d').type(client.Address);\ncy.get('#message-c6a3').type(client.Message);\n// Sélection du produit\ncy.get('#select-c283').select(client.Product);\n// Cocher les cases de loisirs\ncy.contains('label', client.loisir).invoke('attr', 'for').then(checkboxId => {\n  cy.get(`#${checkboxId}`).check();\n});\n// Soumettre le formulaire\ncy.xpath('//*[@id=\"carousel_1853\"]/div/div/div/div/form/div[12]/a').click();\n// Vérification du message de succès\ncy.xpath('//div[contains(@class, \"u-form-send-message\") and contains(@class, \"u-form-send-success\")]').should('contain.text', 'Thank you! Your message has been sent.');",
+              "err": {},
+              "uuid": "a16ad5f9-0f1a-4750-8e4e-5f23e1d75209",
+              "parentUUID": "3e2c0858-5cd8-4a51-9533-88c890eb7748",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54efd1cf-0674-44b3-9cd2-a424f5785275",
+            "a16ad5f9-0f1a-4750-8e4e-5f23e1d75209"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10190,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
